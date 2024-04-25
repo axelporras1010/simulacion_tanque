@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMI</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    HMI
+                </a>
+                <nav>
+                    <a href="#">Integrantes</a>
+                    <a href="#">Simulación</a>
+                    <a href="#">Informe de la Simulación</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- presentacion -->
+    <div class="presentacion contenedor">
+        <div class="informacion">
+            <h1>Automatización de un tanque</h1>
+            <p>Porras Axel C.I:29.545.523</p>
+            <p>Sánchez Francisco C.I: 29.545.027</p>
+        </div>
+        <div class="contenedor-imagen">
+            <img src="img/automatizacion.jpg" alt="Automatización">
+        </div>
+    </div>
+    <!-- Explicacion -->
+    <div class="explicacion contenedor">
+        <h2>Proceso a automatizar</h2>
+        <p>Se requiere automatizar un tanque de agitado y calentado de un líquido. Al iniciar el proceso mediante un botón de inicio se vierte en el tanque el líquido hasta que el sensor del límite máximo permitido se activa, una vez llenado el tanque se procede a calentar el mismo hasta que alcance una temperatura superior a 100 grados además de agitarlo durante unos 10 segundos, al culminar dichos procesos, se abre una válvula de vaciado del tanque para realizar el proceso nuevamente cuando se requiera.</p>
+        <p>En base a estos requerimientos se realizo la siguiente transformación a lenguaje GRAFCET para luego poder hacer la simulación en la herramienta TwidoSuite</p>
+        <!-- Grafo -->
+        <div class="grafo contenedor">
+            <div class="grafo-imagen">
+                <img src="img/Grafcet.png" alt="Grafo">
+            </div>
+        </div>
+    </div>
+    <!-- Simulacion -->
+    <main class="contenedor">
+        <h1>Simulación del proceso</h1>
+        <div class="animacion contenedor">
+            <div class="water">
+                <div class="windmill hidden">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Arrow_Blue_UpperLeft_001.svg" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Arrow_Blue_UpperLeft_001.svg" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/Arrow_Blue_UpperLeft_001.svg" />
+                </div>
+            </div>
+            <div class="flame hidden"></div>
+        </div>
+        <button class="mostrar-animacion boton">Empezar</button>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Automatización de procesos industriales. </p>
+    </footer>
+</body>
+<script src="actions.js"></script>
+</html>
